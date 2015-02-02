@@ -1,0 +1,363 @@
+/* ####################################################
+NOTE
+I am coding styles using SASS (.scss) which is then compiled using Compass into this .css
+
+This is (.scss) file for Accuserv website
+
+Created by Sam Silvey
+###################################################
+*/
+
+@import "_variables-mixins";
+
+#blog_wrapper {
+	background-color: #e9e9e9;
+	padding: 0 15px 0 15px;
+	@include full-inline-block;
+	@media (max-width: 767px) {
+		padding: 0 15px 0 15px;
+	}
+}
+.blog_header {
+	text-align: center;
+
+	.title_bar {
+		background-color: #4a4a4a;
+	}
+	p {
+		margin-top: 25px;
+		font-family: 'Sentinel A', 'Sentinel B'; font-weight: 400; font-style: normal;
+		font-size: 3em;
+		color: #585858;
+		line-height: 1.2;
+		margin-bottom: 50px;
+		@media (max-width: 767px) {
+			font-size: 24px;
+		}
+	}
+}
+.blog_header_inner {
+	max-width: 1100px;
+	margin: 0 auto;
+	padding-top: 100px;
+	@media (max-width: 767px) {
+		padding-top: 38px;
+	}
+}
+
+
+.categories {
+	@include display-inline-flex;
+	@media (max-width: 767px) {
+		display:none;
+	}	
+	ul {
+		@include display-inline-flex;
+		@media (max-width: 767px) {
+			display:block;
+			max-width: 290px;
+			margin: 0 auto;
+		}
+		li {
+			&:first-child {
+				@media (max-width: 767px) {
+					width: 100%;
+					float: none;
+				}
+				a {
+					color: #fff;
+					background-color: #828282 !important;
+					font-family: 'Gotham A', 'Gotham B'; font-weight: 800; font-style: normal;
+					font-style: normal;
+					padding: 15px 30px;
+					@media (min-width: 768px) and (max-width: 979px) {
+						padding: 12px 18px;
+					}
+				}
+			}
+			@media (max-width: 767px) {
+				width: 50%;
+				float: left;
+			}
+			a {
+				text-transform: uppercase;
+				display: block;
+				padding: 15px 20px 15px 68px ;
+				font-family: 'Gotham A', 'Gotham B'; font-weight: 400; font-style: normal;
+				font-family: 'Gotham Narrow A', 'Gotham Narrow B'; font-weight: 400; font-style: italic;
+				font-size: 1.3em;
+				letter-spacing: 0.2em;
+
+				background-color: #fff;
+				background-repeat: no-repeat;
+				background-position: 20px center;
+				background-size: 25px 25px;
+				@include transition(0.5s);
+				&:hover {
+					background-color: #d3d3d3;
+				}
+				@media (max-width: 767px) {
+					font-size: 1.7em;
+					padding: 15px 20px 15px 55px;
+				}
+				&.current {
+					background-color: #d3d3d3;
+				}
+				@media (min-width: 768px) and (max-width: 979px) {
+					padding: 12px 12px 12px 47px;
+					background-position: 12px center;
+				}
+				&[data-filter='.insights'] {
+					background-image: url(../images/svgs/gray/icons_25px_gray_insights.svg);
+				}
+				
+				&[data-filter='.trends'] {
+					background-image: url(../images/svgs/gray/icons_25px_gray_trends.svg);
+				}
+				
+				&[data-filter='.inspiration'] {
+					background-image: url(../images/svgs/gray/icons_25px_gray_inspiration.svg);
+				}
+				
+				&[data-filter='.agency'] {
+					background-image: url(../images/svgs/gray/icons_25px_gray_bg_logo.svg);
+				}
+
+			}
+		}
+	}
+
+}
+
+#search-toggle {
+	width: 58px;
+	height: 45px;
+	line-height: 50px;
+	text-align: center;
+	cursor: pointer;
+	color: #fff;
+
+	background-color: #6c6c6c;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 30px 30px;
+	
+	&.filter_state {
+		background-image: url(../images/svgs/white/icons_30px_white_arrow_left.svg);
+	}
+	&.search_state {
+		background-image: url(../images/svgs/white/icons_30px_white_arrow_right.svg);
+	}
+	@include transition(0.5s);
+	&:hover {
+		opacity: 0.7;
+	}
+	@media (min-width: 768px) and (max-width: 979px) {
+	    height: 37px;
+	    line-height: 41px;
+	    width: 50px;
+	}
+	@media (max-width: 767px) {
+		display: none;
+	}
+}
+
+body.blog {
+	#search-btn, .search-form input[type="search"] {
+		display: none;
+	}	
+}
+
+.blog_main {
+	margin-top: 60px;
+}
+
+.featured_blogs {
+	padding: 0 10px;
+	@media (max-width: 767px) {
+		padding: 0;
+	}
+	li {
+		background-color: #fff;
+		@include full-inline-block;
+		margin: 10px 0;
+		> div {
+			@include make-sm-column(6, 100px);
+			padding-top: 35px;
+			padding-bottom: 35px;
+			height: 430px;
+			@media (min-width: 768px) and (max-width: 1160px) {
+				padding: 15px 20px;
+			}
+			@media (max-width: 767px) {
+				padding: 10px 15px;
+			}
+		}
+		.featured_img {
+			background-size: cover;
+			background-position: center center;
+			background-repeat: no-repeat;
+			cursor: pointer;
+			position: relative;
+			@media (max-width: 767px) {
+				height: 180px;
+			}
+			&:before {
+				content: " ";
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				background-color: rgba($color_purple, 0.8);
+				opacity: 0;
+				@include transition(0.75s);
+			}			
+			&:hover:before {
+				opacity: 1;
+			}
+		}
+		.featured_content {
+			@media (max-width: 767px) {
+				height: auto;
+			}
+			h4 {
+				font-size: 24px;
+				margin-top: 20px;
+				margin-bottom: 33px;
+				@include transition(0.35s);
+				&:hover {
+					color: $color_orange;
+				}
+			}
+
+		}
+	}
+	.featured_header {
+		@media (max-width: 767px) {
+			text-align: center;
+		}
+	}
+}
+
+
+.blog_list {
+	li {
+		padding: 10px;
+		cursor: pointer;
+		@media (max-width: 560px) {
+			padding: 10px 0;
+		}
+		&:hover {
+			@include transition(0.6s);
+			top: -10px !important;
+			@media (max-width: 560px) {
+				top: -5px !important;
+			}
+			.post_bottom {
+				-webkit-box-shadow: 0 18px 10px #b5b5b5;
+				-moz-box-shadow: 0 18px 10px #b5b5b5;
+				-ms-box-shadow: 0 18px 10px #b5b5b5;
+				-o-box-shadow: 0 18px 10px #b5b5b5;
+				box-shadow: 0 18px 10px #b5b5b5;
+			}
+			figure:after {
+				opacity: 1;
+				@include transition(0.75s);
+			}
+		}
+		* {
+			@include transition(0.6s);
+		}
+		&:nth-child(n+20) {
+			*display: none;
+		}
+		figure {
+			position: relative;
+			&:after {
+				content: " ";
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				background-color: rgba($color_purple, 0.8);
+				opacity: 0;
+			}
+			img {
+				width: 100%;
+				position: relative;
+			}
+
+		}
+		.date_wrap {
+			height: 0;
+			text-align: center;
+		}
+		.post_date {
+			display: inline-block;
+			background-color: #e9e9e9;
+			padding: 10px;
+			border: 3px solid #fff;
+			text-transform: uppercase;
+			font-family: 'Gotham A', 'Gotham B'; font-weight: 800; font-style: normal;
+			color: #4a4a4a;
+			letter-spacing: 0.23em;
+			font-size: 15px;
+			position: relative;
+			top: -22px;
+		}
+		.post_bottom {
+			background-color: #fff;
+			background-position: 25px 25px;
+			background-repeat: no-repeat;
+			background-size: 30px 30px;
+			padding: 25px 30px 25px 80px;
+			display: block;
+			@media (max-width: 767px) {
+				background-position: 15px 15px;
+				padding: 20px 15px 20px 60px;
+			}
+			h5 {
+				font-family: 'Sentinel A', 'Sentinel B'; font-weight: 400; font-style: normal;
+				font-size: 24px;
+				margin: 0;
+				color: $color_orange;
+			}
+		}
+	}
+}
+
+
+.cat_insights {
+	background-image: url(../images/svgs/orange/icons_30px_orange_insights.svg);
+}		
+.cat_inspiration {
+	background-image: url(../images/svgs/orange/icons_30px_orange_inspiration.svg);
+}		
+.cat_trends {
+	background-image: url(../images/svgs/orange/icons_30px_orange_trends.svg);
+}		
+.cat_agency {
+	background-image: url(../images/svgs/orange/icons_30px_orange_bg_logo.svg);
+}
+
+
+
+.blog_footer {
+	border-top: 1px solid #a1a1a1;
+	text-align: center;
+	margin-top: 60px;
+	.bg_btn {
+		margin-top: -24px;
+		background-color: #e9e9e9;
+		&:hover {
+			background-color: #4a4a4a;
+		}
+	}
+}
+
+#hidden_posts {
+	display: none;
+}
+
