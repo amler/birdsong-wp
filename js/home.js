@@ -121,3 +121,13 @@ function make_instagram_feed_infos()
 	});
 	jQuery(window).trigger("resize");
 }
+
+
+// adding click event to feed item cells
+jQuery(document).ready(function() {
+	jQuery('.feed_bg').click(function($event){
+		if (jQuery($event.currentTarget).prop('href') === undefined && jQuery($event.target).prop('href') === undefined) {
+			window.location.href = jQuery($event.currentTarget).find('a').eq(0).prop('href');
+		}
+	});
+});

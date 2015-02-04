@@ -58,6 +58,7 @@ get_template_part( 'inc/simplehtmldom/simple_html_dom');
 					<h1><?=$slider_img['slide_caption']?></h1>
 					<div class="clearfix"></div>
 					<a href="<?=$slider_img['slide_link']?>" class="slide_btn">learn more</a>
+					<p style="font-size: 8em">&#8964;</p>
 				</div>
 			</div>
 		</article>

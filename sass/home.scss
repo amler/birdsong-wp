@@ -218,6 +218,14 @@ section.agency {
 		cursor: pointer;
 		color: #fff;
 		position:relative;
+		@include transition(0.7s);
+		&:hover {
+			background-color: #616161;
+		}
+		&:active {
+			background-color: #494949;
+		}
+
 		h3 {
 			line-height: 55px;
 			color: #e9e9e9;
@@ -542,6 +550,9 @@ section.agency {
 				
 				}	
 			}
+			&:hover .featured_content {
+				background-color: rgba($color_purple, 0.9);
+			}
 		}
 
 		.cat_insights:before {
@@ -832,6 +843,9 @@ body.home {
 			}
 			h1 span {
 				@include highlight($color_orange, 0.75);
+			}
+			.text-overlay p {
+				color: $color_orange;
 			}	
 		}		
 		&:nth-child(3) {
@@ -843,7 +857,10 @@ body.home {
 			}
 			h1 span {
 				@include highlight($color_green, 0.75);
-			}	
+			}
+			.text-overlay p {
+				color: $color_green;
+			}
 		}
 		&:nth-child(4) {
 			.slide_btn {
@@ -854,7 +871,10 @@ body.home {
 			}
 			h1 span {
 				@include highlight($color_purple, 0.75);
-			}	
+			}
+			.text-overlay p {
+				color: $color_purple;
+			}
 		}
 
 		.slide-background {

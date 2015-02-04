@@ -43,16 +43,16 @@
 				<div class="footer_socials">
 					<ul class="social_list">
 						<li>
-							<a href="<?php the_field('twitter_link', 'options');?>" class="twitter_on"  target="_blank"></a>
+							<a href="<?php the_field('twitter_link', 'options');?>" class="menu_twitter_on"  target="_blank"></a>
 						</li>
 						<li>
-							<a href="<?php the_field('facebook_link', 'options');?>" class="facebook_on"  target="_blank"></a>
+							<a href="<?php the_field('facebook_link', 'options');?>" class="menu_fb_on"  target="_blank"></a>
 						</li>
 						<li>
-							<a href="<?php the_field('linkedin_link', 'options');?>" class="linkedin_on"  target="_blank"></a>
+							<a href="<?php the_field('linkedin_link', 'options');?>" class="menu_linkedin_on"  target="_blank"></a>
 						</li>
 						<li>
-							<a href="<?php the_field('instagram_link', 'options');?>" class="instagram_on"  target="_blank"></a>
+							<a href="<?php the_field('instagram_link', 'options');?>" class="menu_instagram_on"  target="_blank"></a>
 						</li>
 					</ul>
 				</div>
