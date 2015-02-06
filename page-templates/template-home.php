@@ -138,7 +138,10 @@ get_template_part( 'inc/simplehtmldom/simple_html_dom');
 			<div class="service">
 				<div class="service_control_bar wow fadeInDown">
 					<h3>our services</h3>
-					<i class="services_off" id="sc_ctrl_btn"></i>
+					<div class="services_off" id="sc_ctrl_btn">
+						<span class="left"></span>
+						<span class="right"></span>
+					</div>
 				</div>
 				<div class="service_list">
 					<ul>

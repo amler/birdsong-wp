@@ -81,7 +81,16 @@ $categories = get_categories($args);
 		      if ($index == 0) {
 		?>
 		     <li>
-		     	<div class="featured_img" style="background-image:url(<?=$featured_img?>)" onclick="location.href='<?php the_permalink();?>'"></div>
+		     	<!-- OLD CODE
+		     	<div class="featured_img" style="background-image:url(<?=$featured_img?>)" onclick="location.href='<?php the_permalink();?>'"></div> -->
+		     	<!-- AMLER SHIT -->
+		     	<div class="featured_img" style="background-image:url(<?=$featured_img?>)" onclick="location.href='<?php the_permalink();?>'">
+		     		<div class="featured_overlay">
+						<a href="<?php the_permalink();?>" class="bg_btn">
+							learn more
+						</a>
+					</div>
+		     	</div>
 		     	<div class="featured_content">
 		     		<div class="featured_header">
 			     		<div class="featured_post_infos cat_<?php echo $cat_obj[0]->slug; ?>">

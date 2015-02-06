@@ -250,13 +250,46 @@ section.agency {
 	background-position: center center;
 	background-repeat: no-repeat;
 	
+	span {
+		background: #fff;
+		height: 2px;
+		position: absolute;
+		width: 10px;
+		@include transition(0.5s);
+	}
+
 	&.services_off {
-		background-image: url(../images/svgs/white/icons_30px_white_arrow_down.svg);
-		background-size: 30px 30px;
+		//background-image: url(../images/svgs/white/icons_30px_white_arrow_down.svg);
+		//background-size: 30px 30px;
+		span {
+			display: block;
+			left: 27px;
+			top: 30px;
+			width: 10px;
+			&.left {
+				transform: rotate(45deg) translate(-50%, 0);
+			}
+			&.right {
+				transform: rotate(135deg) translate(-50%, 0);
+			}
+		}
 	}
 	&.services_on {
-		background-image: url(../images/arrow-close.png);
-		background-size: 14px 14px;
+		//background-image: url(../images/arrow-close.png);
+		//background-size: 14px 14px;
+		span {
+			display: block;
+			height: 2px;
+			left: 23px;
+			top: 26px;
+			width: 20px;
+			&.left {
+				transform: rotate(135deg);
+			}
+			&.right {
+				transform: rotate(45deg);
+			}
+		}
 	}
 	@media (max-width: 767px) {
 		display: none;

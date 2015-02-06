@@ -68,6 +68,10 @@ Created by Sam Silvey
 	text-align: center;
 	display: none;
 
+	a {
+		@include transition(0.6s);
+	}
+
 }
 .nav_logo {
 	padding: 30px 0;
@@ -187,12 +191,14 @@ Created by Sam Silvey
     position: relative;
 }
 
+
 #toggle-menu span {
     display: block;
     width: 30px;
     height: 4px;
     background: #a1a1a1;
     position: absolute;
+	@include transition(0.5s);
     -webkit-animation-fill-mode: forwards;
     -moz-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
@@ -200,6 +206,18 @@ Created by Sam Silvey
 #toggle-menu.toggle-menu-visible span {
 	background: #fff;
 }	
+
+
+a#toggle-menu.toggle-menu-visible:hover {
+	span {
+		background: #400040;
+	}
+}
+a#toggle-menu.toggle-menu-hidden:hover {
+	span {
+		background: #4A4A4A;
+	}
+}
 
 #toggle-menu span.top {
     top: -3px;
@@ -1497,4 +1515,3 @@ body.error404 {
 	@extend body.search-no-results;
 }
 /** Search Form End **/
-

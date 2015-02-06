@@ -194,27 +194,41 @@ body.blog {
 			}
 		}
 		.featured_img {
-			background-size: cover;
 			background-position: center center;
 			background-repeat: no-repeat;
+			background-size: cover;
 			cursor: pointer;
 			position: relative;
 			@media (max-width: 767px) {
 				height: 180px;
 			}
-			&:before {
-				content: " ";
+			.featured_overlay {
+				opacity: 0;
 				position: absolute;
 				width: 100%;
 				height: 100%;
-				top: 0;
 				left: 0;
-				background-color: rgba($color_purple, 0.8);
-				opacity: 0;
-				@include transition(0.75s);
-			}			
-			&:hover:before {
+				top: 0;
+				background-color: rgba($color_purple, 0.7);
+				@include transition(0.7s);
+			}
+			&:hover .featured_overlay {
 				opacity: 1;
+			}
+			.bg_btn {
+				color: #fff;
+				border-color: #fff;
+				top: 44%;
+				left: 50%;
+				font-size: 1.35em;
+				background-color: transparent;
+				-webkit-transform: translateX(-50%);
+					-ms-transform: translateX(-50%);
+						transform: translateX(-50%);
+				&:hover {
+					color: $color_purple;
+					background-color: #fff;
+				}
 			}
 		}
 		.featured_content {
