@@ -1150,11 +1150,21 @@ div[id^=post-] {
 			width:55px;
 			height:55px;
 			border: 0;
-			background: url(../images/svgs/white/icons_30px_white_arrow_right.svg) no-repeat scroll center center #4a4a4a;
+			background: url(../images/svgs/white/icons_30px_white_arrow_right.svg) no-repeat center center #4a4a4a;
 			background-size: 30px 30px;
 			cursor: pointer;
 			margin: 0;
 			text-indent: -999em;
+			-webkit-transition: background 0.5s ease;
+			   -moz-transition: background 0.5s ease;
+				-ms-transition: background 0.5s ease;
+				 -o-transition: background 0.5s ease;
+					transition: background 0.5s ease;
+
+			&:hover {
+				background: url(../images/svgs/white/icons_30px_white_arrow_right.svg) no-repeat center center $gray-light;
+				background-size: 30px 30px;
+			}
 		}
 		label {
 			position: relative;
