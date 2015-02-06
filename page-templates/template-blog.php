@@ -81,16 +81,13 @@ $categories = get_categories($args);
 		      if ($index == 0) {
 		?>
 		     <li>
-		     	<!-- OLD CODE
-		     	<div class="featured_img" style="background-image:url(<?=$featured_img?>)" onclick="location.href='<?php the_permalink();?>'"></div> -->
-		     	<!-- AMLER SHIT -->
-		     	<div class="featured_img" style="background-image:url(<?=$featured_img?>)" onclick="location.href='<?php the_permalink();?>'">
-		     		<div class="featured_overlay">
+				<div class="featured_img" style="background-image:url(<?=$featured_img?>)" onclick="location.href='<?php the_permalink();?>'">
+					<div class="featured_overlay">
 						<a href="<?php the_permalink();?>" class="bg_btn">
 							learn more
 						</a>
 					</div>
-		     	</div>
+				</div>
 		     	<div class="featured_content">
 		     		<div class="featured_header">
 			     		<div class="featured_post_infos cat_<?php echo $cat_obj[0]->slug; ?>">
@@ -107,27 +104,39 @@ $categories = get_categories($args);
 		     	</div>
 		     </li>  
 		<?php
-		      } else if ($index == 1) {
+			} else if ($index == 1) {
 		?>
-		     <li>
-		     	<div class="featured_img visible-xs" style="background-image:url(<?=$featured_img?>)" onclick="location.href='<?php the_permalink();?>'"></div>
-		     	<div class="featured_content">
-		     		<div class="featured_header">
-			     		<div class="featured_post_infos cat_<?php echo $cat_obj[0]->slug; ?>">
-			     			<span class="post_category"><?php echo $cat_obj[0]->name; ?></span>
-			     			<span class="post_date"><?php echo get_the_date('m.d.Y'); ?></span>
-			     			<span class="post_author"><?php the_author(); ?></span>
-			     		</div>
-			     		<div class="clearfix">
-			     			<span class="post_title_bar"></span>
-			     		</div>
-		     		</div>
-		     		<h4><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h4>
-		     		<p><?php echo excerpt(57); ?></p>
-		     	</div>
-		     	<div class="featured_img hidden-xs" style="background-image:url(<?=$featured_img?>)" onclick="location.href='<?php the_permalink();?>'"></div>
-		     </li>  
-		<?php      	
+			<li>
+				<div class="featured_img visible-xs" style="background-image:url(<?=$featured_img?>)" onclick="location.href='<?php the_permalink();?>'">
+					<div class="featured_overlay">
+						<a href="<?php the_permalink();?>" class="bg_btn">
+							learn more
+						</a>
+					</div>
+				</div>
+				<div class="featured_content">
+					<div class="featured_header">
+						<div class="featured_post_infos cat_<?php echo $cat_obj[0]->slug; ?>">
+							<span class="post_category"><?php echo $cat_obj[0]->name; ?></span>
+							<span class="post_date"><?php echo get_the_date('m.d.Y'); ?></span>
+							<span class="post_author"><?php the_author(); ?></span>
+						</div>
+						<div class="clearfix">
+							<span class="post_title_bar"></span>
+						</div>
+					</div>
+					<h4><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h4>
+					<p><?php echo excerpt(57); ?></p>
+				</div>
+				<div class="featured_img hidden-xs" style="background-image:url(<?=$featured_img?>)" onclick="location.href='<?php the_permalink();?>'">
+					<div class="featured_overlay">
+						<a href="<?php the_permalink();?>" class="bg_btn">
+							learn more
+						</a>
+					</div>
+				</div>
+			</li>  
+		<?php
 		      }	
 			  $index++;
 		      endwhile;
