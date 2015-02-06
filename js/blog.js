@@ -20,8 +20,6 @@ jQuery(window).load(function() {
 
 jQuery(window).resize(function() {
 	set_blog_isotope();
-
-	
 });
 
 var $container;
@@ -177,3 +175,15 @@ function reset_iso_item_width()
 		});
 	});
 }
+
+/* Categories/Search bar */
+jQuery(document).ready(function() {
+	jQuery(window).scroll(function() {
+		var scroll = $(window).scrollTop();
+		if (scroll >= 320) {
+			$('.blog_header_inner .categories').addClass("categories-top-fix");
+		} else {
+			$('.blog_header_inner .categories').removeClass("categories-top-fix");
+		}
+	});
+});

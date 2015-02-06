@@ -129,6 +129,18 @@ Created by Sam Silvey
 
 }
 
+.categories-top-fix {
+	position: fixed;
+	transform: translateX(-50%);
+	top: 74px;
+	z-index: 4;
+	-webkit-box-shadow: 0 1px 12px 0px gray;
+	-moz-box-shadow: 0 1px 12px 0px gray;
+	-ms-box-shadow: 0 1px 12px 0px gray;
+	-o-box-shadow: 0 1px 12px 0px gray;
+	box-shadow: 0 1px 12px 0px gray;
+}
+
 #search-toggle {
 	width: 58px;
 	height: 45px;
@@ -150,7 +162,7 @@ Created by Sam Silvey
 	}
 	@include transition(0.5s);
 	&:hover {
-		opacity: 0.7;
+		background-color: #919191;
 	}
 	@media (min-width: 768px) and (max-width: 979px) {
 	    height: 37px;

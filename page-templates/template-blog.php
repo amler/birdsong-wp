@@ -107,13 +107,8 @@ $categories = get_categories($args);
 			} else if ($index == 1) {
 		?>
 			<li>
-				<div class="featured_img visible-xs" style="background-image:url(<?=$featured_img?>)" onclick="location.href='<?php the_permalink();?>'">
-					<div class="featured_overlay">
-						<a href="<?php the_permalink();?>" class="bg_btn">
-							learn more
-						</a>
-					</div>
-				</div>
+				<div class="featured_img visible-xs" style="background-image:url(<?=$featured_img?>)" onclick="location.href='<?php the_permalink();?>'"></div>
+				
 				<div class="featured_content">
 					<div class="featured_header">
 						<div class="featured_post_infos cat_<?php echo $cat_obj[0]->slug; ?>">
@@ -126,8 +121,9 @@ $categories = get_categories($args);
 						</div>
 					</div>
 					<h4><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h4>
-					<p><?php echo excerpt(57); ?></p>
+					<p><?php echo excerpt(50); ?></p>
 				</div>
+
 				<div class="featured_img hidden-xs" style="background-image:url(<?=$featured_img?>)" onclick="location.href='<?php the_permalink();?>'">
 					<div class="featured_overlay">
 						<a href="<?php the_permalink();?>" class="bg_btn">
@@ -137,7 +133,7 @@ $categories = get_categories($args);
 				</div>
 			</li>  
 		<?php
-		      }	
+		    }	
 			  $index++;
 		      endwhile;
 		    } 
