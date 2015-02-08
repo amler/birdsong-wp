@@ -20,7 +20,8 @@ jQuery(document).ready(function() {
 			slidesSpacing: 0,
 			autoPlay: {
 				enabled: true,
-				pauseOnHover: false
+				pauseOnHover: false,
+				delay: 4500
 			}
 		});	
 	}
@@ -45,7 +46,7 @@ jQuery(document).ready(function() {
 			autoPlay: {
 				enabled: true,
 				pauseOnHover: false,
-				delay: 10000
+				delay: 4500
 			}
 		});
 	}
@@ -68,7 +69,8 @@ jQuery(document).ready(function() {
 			slidesSpacing: 0,
 			autoPlay: {
 				enabled: true,
-				pauseOnHover: false
+				pauseOnHover: false,
+				delay: 4500
 			},
 			video: {
 				autoHideArrows:true,

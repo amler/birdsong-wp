@@ -44,16 +44,16 @@
 				<div class="clearfix">
 					<ul class="social_list">
 						<li>
-							<a href="<?php the_field('twitter_link', 'options');?>" class="twitter_on" target="_blank"><span></span></a>
+							<a href="<?php the_field('twitter_link', 'options');?>" class="twitter_on" target="_blank"></a>
 						</li>
 						<li>
-							<a href="<?php the_field('facebook_link', 'options');?>" class="facebook_on" target="_blank"><span></span></a>
+							<a href="<?php the_field('facebook_link', 'options');?>" class="facebook_on" target="_blank"></a>
 						</li>
 						<li>
-							<a href="<?php the_field('linkedin_link', 'options');?>" class="linkedin_on" target="_blank"><span></span></a>
+							<a href="<?php the_field('linkedin_link', 'options');?>" class="linkedin_on" target="_blank"></a>
 						</li>
 						<li>
-							<a href="<?php the_field('instagram_link', 'options');?>" class="instagram_on" target="_blank"><span></span></a>
+							<a href="<?php the_field('instagram_link', 'options');?>" class="instagram_on" target="_blank"></a>
 						</li>
 					</ul>
 				</div>
