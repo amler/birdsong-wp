@@ -580,6 +580,8 @@ ul.icon_list.one-col {
 }
 
 #nav-study {
+	display: none; // removed per revisions 2-8-2015
+	
 	@media (max-width: 767px) {
 		display: none;
 	}

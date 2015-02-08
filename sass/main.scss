@@ -1162,7 +1162,7 @@ div[id^=post-] {
 					transition: background 0.5s ease;
 
 			&:hover {
-				background: url(../images/svgs/white/icons_30px_white_arrow_right.svg) no-repeat center center $gray-light;
+				background: url(../images/svgs/white/icons_30px_white_arrow_right.svg) no-repeat center center #919191;
 				background-size: 30px 30px;
 			}
 		}
