@@ -13,11 +13,6 @@ jQuery(document).ready(function() {
 
 });	
 
-
-jQuery(window).load(function() {
-	
-});
-
 jQuery(window).resize(function() {
 	set_blog_isotope();
 });
@@ -40,6 +35,8 @@ function set_blog_isotope() {
 		jQuery(this).addClass('current');
 
 		var selector = jQuery(this).attr('data-filter');
+		
+
 		$container.isotope({
 			filter: selector
 		});
@@ -47,8 +44,7 @@ function set_blog_isotope() {
 		jQuery(".featured_blogs").slideUp();
 
 		return false;
-	});	
-
+	});
 }
 
 function set_iso_item_width()
@@ -72,22 +68,32 @@ function search_toggle()
 	jQuery("#search-toggle").click(function() {
 		jQuery(this).toggleClass('filter_state').toggleClass('search_state');
 		jQuery(".categories ul li:nth-child(n+2)").fadeToggle(150, 'swing');
-		jQuery(".search-form input[type='search']").fadeToggle(150, 'swing');
+		jQuery("#search-btn").fadeToggle(1, 'linear');
+		jQuery("#virtual-search-btn").fadeToggle(1, 'linear');
+		jQuery(".search-form input[type='search']").fadeToggle(300, 'linear');
+		return false;
+	});
 
-		jQuery("#search-btn").fadeToggle(1, 'swing');
-		jQuery("#virtual-search-btn").fadeToggle(1, 'swing');
-	});	
-
+	/*
 	jQuery(".filter li a[no-data-filter='all']").click(function() {
+		alert('what');
 		jQuery("#search-toggle").removeClass("search_state");
 		jQuery("#search-toggle").addClass("filter_state");
 
-		jQuery(".categories ul li:nth-child(n+2)").fadeIn(150, 'swing');
-		jQuery(".search-form input[type='search']").fadeOut(150, 'swing');
+		jQuery(".categories ul li:nth-child(n+2)").fadeIn(300, 'linear');
+		jQuery(".search-form input[type='search']").fadeOut(300, 'linear');
 
-		jQuery("#search-btn").fadeOut(1, 'swing');
-		jQuery("#virtual-search-btn").fadeIn(1, 'swing');
+		jQuery("#search-btn").fadeOut(1, 'linear');
+		jQuery("#virtual-search-btn").fadeIn(1, 'linear');
+		return false;
 	});
+	*/
+	/*
+	jQuery('.filter li a').click(function() {
+		alert('all');
+
+	});
+*/
 }
 
 
@@ -147,7 +153,7 @@ function iso_preprocess()
 					alert("No more posts to load.");
 				}
 		        break;
-		    
+
 		    default:
 			    filter_posts = jQuery("#hidden_posts li");
 			    if (filter_posts.length > 0) {
@@ -159,8 +165,9 @@ function iso_preprocess()
 			    }
 			    break;
 		}
-			
+		
 		jQuery(window).scrollTop(curScrollTop);
+		return false;
 	});
 }
 

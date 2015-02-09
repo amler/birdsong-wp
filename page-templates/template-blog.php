@@ -39,7 +39,7 @@ $categories = get_categories($args);
 			<div class="categories">
 				<ul class="filter">
 					<li>
-						<a href="javascript:;" class="link current selected" no-data-filter="all">categories</a>
+						<a href="#" class="link current selected" data-filter="*">categories</a>
 					</li>
 					<?php 
 					foreach ($categories as $key => $category) { 

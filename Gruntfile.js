@@ -28,14 +28,13 @@ module.exports = function(grunt) {
 					'sass/*.scss'
 				],
 				tasks: ['sass']
-			}
+			},
 		}
 	});
 
 	// Load NPM Tasks
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-watch');
-
 	// Register Tasks
 	grunt.registerTask('default', ['watch']);	
 };
