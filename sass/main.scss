@@ -890,9 +890,6 @@ div[id^=post-] {
 		}
 		a {
 			left: 0;
-			&:before {
-				background-image: url("../images/prev_arrow.png");
-			}
 		}
 	}
 	.top-nav-next {
@@ -910,9 +907,6 @@ div[id^=post-] {
 		}
 		a {
 			right: 0;
-			&:before {
-				background-image: url("../images/next_arrow.png");
-			}
 		}
 	}
 

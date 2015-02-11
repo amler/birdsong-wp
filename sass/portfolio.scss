@@ -580,7 +580,6 @@ ul.icon_list.one-col {
 }
 
 #nav-study {
-	display: none; // removed per revisions 2-8-2015
 	
 	@media (max-width: 767px) {
 		display: none;
@@ -600,9 +599,6 @@ ul.icon_list.one-col {
 		}
 		a {
 			left: 0;
-			&:before {
-				background-image: url("../images/prev_arrow.png");
-			}
 		}
 	}
 	.top-nav-next {
@@ -620,9 +616,6 @@ ul.icon_list.one-col {
 		}
 		a {
 			right: 0;
-			&:before {
-				background-image: url("../images/next_arrow.png");
-			}
 		}
 	}
 

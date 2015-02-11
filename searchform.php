@@ -4,5 +4,5 @@
 		<input type="search" title="Search for:" name="s" value="" placeholder="Search" class="search-field">
 	</label>
 	<input type="submit" value="" class="search-icon" id="search-btn">
-	<i class="search-icon" id="virtual-search-btn"></i>
+	<!--<i class="search-icon" id="virtual-search-btn"></i>-->
 </form>

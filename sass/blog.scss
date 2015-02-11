@@ -47,11 +47,14 @@ Created by Sam Silvey
 
 
 .categories {
+	max-height: 45px;
+	overflow: hidden;
 	@include display-inline-flex;
 	@media (max-width: 767px) {
 		display:none;
 	}	
 	ul {
+		height: 45px;
 		@include display-inline-flex;
 		@media (max-width: 767px) {
 			display:block;
@@ -60,6 +63,7 @@ Created by Sam Silvey
 		}
 		li {
 			&:first-child {
+				height: 45px;
 				@media (max-width: 767px) {
 					width: 100%;
 					float: none;

@@ -123,11 +123,30 @@ function make_instagram_feed_infos()
 }
 
 
-// adding click event to feed item cells
 jQuery(document).ready(function() {
+	// adding click event to feed item cells
 	jQuery('.feed_bg').click(function($event){
 		if (jQuery($event.currentTarget).prop('href') === undefined && jQuery($event.target).prop('href') === undefined) {
 			window.location.href = jQuery($event.currentTarget).find('a').eq(0).prop('href');
 		}
 	});
+
+	// arrow click
+	$('.slide-inner .arrow-bounce').click(function() {
+		var index = $(this).parent().parent().index() - 1;
+		var count = 0;
+		$('article.slide').each(function(index) {
+			count ++;
+		});
+		if (index >= 0 && (index + 1) < count) {
+			var element = '.slide-navigator a#slide_' + (index + 1);
+			// $(element).trigger('click');
+			console.log('index', index)
+            var t = $(this).parent("li").index();
+            PTT.SlideManager.animateTo(t, "click")
+		} else {
+			$('html, body').animate({ scrollTop: $('section#orange').offset().top - 74}, 1000);
+		}
+	});
 });
+

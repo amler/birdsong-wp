@@ -8909,6 +8909,7 @@ PTT.SlideManager = {
             e.preventDefault();
             if (PTT.SlideManager.smallScreen) return !1;
             var t = $(this).parent("li").index();
+            console.log(t);
             PTT.SlideManager.animateTo(t, "click")
         });
         $(".slide-navigator li a").on("mouseover", function(e) {
