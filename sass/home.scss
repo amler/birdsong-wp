@@ -1152,20 +1152,32 @@ body.home {
 		@include transform(translateY(-15px));
 	}
 }
-.arrow-bounce {
-	background-image: url(../images/arrow-down.png);
+.arrow-bounce-container {
 	bottom: 25px;
-	height: 21px;
-	left: 49%;
+	cursor: pointer;
+	height: 80px;
+	left: 48%;
 	position: fixed;
-	width: 35px;
-	opacity: 0.6;
-	@include transition(0.3s);
-	-webkit-animation: bounce 2s infinite;
-	   -moz-animation: bounce 2s infinite;
-	     -o-animation: bounce 2s infinite;
-	        animation: bounce 2s infinite;
-	&:hover {
-		opacity: 1;
-	}
-} 
+	width: 60px;
+	
+	i.arrow-bounce {
+		background-image: url(../images/arrow-down.png);
+		bottom: 0;
+		height: 21px;
+		left: 0;
+		margin-left: auto;
+		margin-right: auto;
+		opacity: 0.6;
+		position: absolute;
+		right: 0;
+		width: 35px;
+		@include transition(0.3s);
+		-webkit-animation: bounce 2s infinite;
+		   -moz-animation: bounce 2s infinite;
+		     -o-animation: bounce 2s infinite;
+		        animation: bounce 2s infinite;
+		&:hover {
+			opacity: 1;
+		}
+	} 
+}

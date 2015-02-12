@@ -60,7 +60,9 @@ get_template_part( 'inc/simplehtmldom/simple_html_dom');
 					<a href="<?=$slider_img['slide_link']?>" class="slide_btn">learn more</a>
 				</div>
 				
-				<div class="arrow-bounce"></div>
+				<div class="arrow-bounce-container">
+					<i class="arrow-bounce"></i>
+				</div>
 			</div>
 		</article>
 		<?php

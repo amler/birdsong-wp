@@ -132,18 +132,14 @@ jQuery(document).ready(function() {
 	});
 
 	// arrow click
-	$('.slide-inner .arrow-bounce').click(function() {
+	$('.slide-inner .arrow-bounce-container').click(function() {
 		var index = $(this).parent().parent().index() - 1;
 		var count = 0;
 		$('article.slide').each(function(index) {
 			count ++;
 		});
 		if (index >= 0 && (index + 1) < count) {
-			var element = '.slide-navigator a#slide_' + (index + 1);
-			// $(element).trigger('click');
-			console.log('index', index)
-            var t = $(this).parent("li").index();
-            PTT.SlideManager.animateTo(t, "click")
+			PTT.SlideManager.animateTo((index + 1), 'click');
 		} else {
 			$('html, body').animate({ scrollTop: $('section#orange').offset().top - 74}, 1000);
 		}
