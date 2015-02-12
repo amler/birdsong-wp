@@ -74,7 +74,7 @@ function search_toggle()
 		return false;
 	});
 
-	/*
+	
 	jQuery(".filter li a[no-data-filter='all']").click(function() {
 		alert('what');
 		jQuery("#search-toggle").removeClass("search_state");
@@ -87,13 +87,6 @@ function search_toggle()
 		jQuery("#virtual-search-btn").fadeIn(1, 'linear');
 		return false;
 	});
-	*/
-	/*
-	jQuery('.filter li a').click(function() {
-		alert('all');
-
-	});
-*/
 }
 
 

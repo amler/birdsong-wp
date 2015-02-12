@@ -47,7 +47,7 @@ Created by Sam Silvey
 
 
 .categories {
-	max-height: 45px;
+	height: 45px;
 	overflow: hidden;
 	@include display-inline-flex;
 	@media (max-width: 767px) {
@@ -63,7 +63,6 @@ Created by Sam Silvey
 		}
 		li {
 			&:first-child {
-				height: 45px;
 				@media (max-width: 767px) {
 					width: 100%;
 					float: none;
@@ -84,6 +83,7 @@ Created by Sam Silvey
 				float: left;
 			}
 			a {
+			height: 45px;
 				text-transform: uppercase;
 				display: block;
 				padding: 15px 20px 15px 68px ;
@@ -129,8 +129,10 @@ Created by Sam Silvey
 
 			}
 		}
+		form {
+			height: 45px
+		}
 	}
-
 }
 
 .categories-top-fix {
@@ -169,7 +171,7 @@ Created by Sam Silvey
 		background-color: #919191;
 	}
 	@media (min-width: 768px) and (max-width: 979px) {
-	    height: 37px;
+	    
 	    line-height: 41px;
 	    width: 50px;
 	}
