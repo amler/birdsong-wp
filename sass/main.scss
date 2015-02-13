@@ -46,7 +46,7 @@ Created by Sam Silvey
 		text-align: center;
 		@include full-inline-block;
 		position: relative;
-		z-index: 2;
+		z-index: 5;
 		@media (max-width: 767px) {
 			padding: 38px 15px;
 		}
